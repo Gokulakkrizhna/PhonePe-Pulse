@@ -8,7 +8,7 @@ from sqlalchemy import create_engine
 
 
 def data_collection():
-    path = r"C:\Users\Kiruppazhini\Desktop\project\capstone_2\pulse\data\aggregated\transaction\country\india\state"
+    path = r"please provide the path"
     Agg_state_list=os.listdir(path)
     
     a = {'S':[], 'Y':[],'Q':[],'TY':[], 'Cnt':[], 'Amt':[]}
@@ -39,7 +39,7 @@ def data_collection():
     
     df = pd.DataFrame(a)
 
-    path = r"C:\Users\Kiruppazhini\Desktop\project\capstone_2\pulse\data\aggregated\user\country\india\state"
+    path = r"please provide the path"
     Agg_state_list=os.listdir(path)
 
     a = {'State':[], 'Year':[],'Quater':[],'Reg_users':[], 'App_opens':[]}
@@ -67,7 +67,7 @@ def data_collection():
     
     df1 = pd.DataFrame(a)
 
-    path = r"C:\Users\Kiruppazhini\Desktop\project\capstone_2\pulse\data\map\transaction\hover\country\india\state"
+    path = r"please provide the path"
     Agg_state_list=os.listdir(path)
 
     a = {'State':[], 'Year':[],'Quater':[],'District':[], 'Tot_trans':[], 'Tot_amt':[]}
@@ -98,7 +98,7 @@ def data_collection():
 
     df2 = pd.DataFrame(a)
 
-    path = r"C:\Users\Kiruppazhini\Desktop\project\capstone_2\pulse\data\map\user\hover\country\india\state"
+    path = r"please provide the path"
     Agg_state_list=os.listdir(path)
 
     a = {'State':[], 'Year':[],'Quater':[],'District': [], 'Reg_users':[], 'App_opens':[]}
@@ -128,7 +128,7 @@ def data_collection():
 
     df3 = pd.DataFrame(a)
 
-    path = r"C:\Users\Kiruppazhini\Desktop\project\capstone_2\pulse\data\top\transaction\country\india\state"
+    path = r"please provide the path"
     Agg_state_list=os.listdir(path)
 
     a = {'State':[], 'Year':[],'Quater':[],'District': [], 'trans_count':[], 'trans_amt':[]}
@@ -174,7 +174,7 @@ def data_collection():
     df4 = pd.DataFrame(a)
     df5 = pd.DataFrame(b)
 
-    path = r"C:\Users\Kiruppazhini\Desktop\project\capstone_2\pulse\data\top\user\country\india\state"
+    path = r"please provide the path"
     Agg_state_list=os.listdir(path)
 
     a = {'State':[], 'Year':[],'Quater':[],'District': [], 'Reg_usr':[]}
@@ -259,82 +259,26 @@ def data_cleaning(df,df1,df2,df3,df4,df5,df6,df7):
         'west-bengal': "West Bengal"
     }
     df["S"] = df["S"].replace(state_dict)
-    # upper_limit = df['Cnt'].mean() + 3*df['Cnt'].std()
-    # lower_limit = df['Cnt'].mean() - 3*df['Cnt'].std()
-    # df['Cnt'] = np.where(df['Cnt']>upper_limit,upper_limit,df['Cnt'])
-    # df['Cnt'] = np.where(df['Cnt']<lower_limit,lower_limit,df['Cnt'])
-    # upper_limit = df['Amt'].mean() + 3*df['Amt'].std()
-    # lower_limit = df['Amt'].mean() - 3*df['Amt'].std()
-    # df['Amt'] = np.where(df['Amt']>upper_limit,upper_limit,df['Amt'])
-    # df['Amt'] = np.where(df['Amt']<lower_limit,lower_limit,df['Amt'])
 
     df1["State"] = df1["State"].replace(state_dict)
-    # upper_limit = df1['Reg_users'].mean() + 3*df1['Reg_users'].std()
-    # lower_limit = df1['Reg_users'].mean() - 3*df1['Reg_users'].std()
-    # df1['Reg_users'] = np.where(df1['Reg_users']>upper_limit,upper_limit,df1['Reg_users'])
-    # df1['Reg_users'] = np.where(df1['Reg_users']<lower_limit,lower_limit,df1['Reg_users'])
-    # upper_limit = df1['App_opens'].mean() + 3*df1['App_opens'].std()
-    # lower_limit = df1['App_opens'].mean() - 3*df1['App_opens'].std()
-    # df1['App_opens'] = np.where(df1['App_opens']>upper_limit,upper_limit,df1['App_opens'])
-    # df1['App_opens'] = np.where(df1['App_opens']<lower_limit,lower_limit,df1['App_opens'])
 
     df2["State"] = df2["State"].replace(state_dict)
     df2["District"] = df2["District"].str.replace("district","")
     df2["District"] = df2["District"].str.title()
-    # upper_limit = df2['Tot_trans'].mean() + 3*df2['Tot_trans'].std()
-    # lower_limit = df2['Tot_trans'].mean() - 3*df2['Tot_trans'].std()
-    # df2['Tot_trans'] = np.where(df2['Tot_trans']>upper_limit,upper_limit,df2['Tot_trans'])
-    # df2['Tot_trans'] = np.where(df2['Tot_trans']<lower_limit,lower_limit,df2['Tot_trans'])
-    # upper_limit = df2['Tot_amt'].mean() + 3*df2['Tot_amt'].std()
-    # lower_limit = df2['Tot_amt'].mean() - 3*df2['Tot_amt'].std()
-    # df2['Tot_amt'] = np.where(df2['Tot_amt']>upper_limit,upper_limit,df2['Tot_amt'])
-    # df2['Tot_amt'] = np.where(df2['Tot_amt']<lower_limit,lower_limit,df2['Tot_amt'])
 
     df3["State"] = df3["State"].replace(state_dict)
     df3["District"] = df3["District"].str.replace("district","")
     df3["District"] = df3["District"].str.title()
-    # upper_limit = df3['Reg_users'].mean() + 3*df3['Reg_users'].std()
-    # lower_limit = df3['Reg_users'].mean() - 3*df3['Reg_users'].std()
-    # df3['Reg_users'] = np.where(df3['Reg_users']>upper_limit,upper_limit,df3['Reg_users'])
-    # df3['Reg_users'] = np.where(df3['Reg_users']<lower_limit,lower_limit,df3['Reg_users'])
-    # upper_limit = df3['App_opens'].mean() + 3*df3['App_opens'].std()
-    # lower_limit = df3['App_opens'].mean() - 3*df3['App_opens'].std()
-    # df3['App_opens'] = np.where(df3['App_opens']>upper_limit,upper_limit,df3['App_opens'])
-    # df3['App_opens'] = np.where(df3['App_opens']<lower_limit,lower_limit,df3['App_opens'])
 
     df4["State"] = df4["State"].replace(state_dict)
     df4["District"] = df4["District"].str.title()
-    # upper_limit = df4['trans_count'].mean() + 3*df4['trans_count'].std()
-    # lower_limit = df4['trans_count'].mean() - 3*df4['trans_count'].std()
-    # df4['trans_count'] = np.where(df4['trans_count']>upper_limit,upper_limit,df4['trans_count'])
-    # df4['trans_count'] = np.where(df4['trans_count']<lower_limit,lower_limit,df4['trans_count'])
-    # upper_limit = df4['trans_amt'].mean() + 3*df4['trans_amt'].std()
-    # lower_limit = df4['trans_amt'].mean() - 3*df4['trans_amt'].std()
-    # df4['trans_amt'] = np.where(df4['trans_amt']>upper_limit,upper_limit,df4['trans_amt'])
-    # df4['trans_amt'] = np.where(df4['trans_amt']<lower_limit,lower_limit,df4['trans_amt'])
 
     df5["State"] = df5["State"].replace(state_dict)
-    # upper_limit = df5['trans_count'].mean() + 3*df5['trans_count'].std()
-    # lower_limit = df5['trans_count'].mean() - 3*df5['trans_count'].std()
-    # df5['trans_count'] = np.where(df5['trans_count']>upper_limit,upper_limit,df5['trans_count'])
-    # df5['trans_count'] = np.where(df5['trans_count']<lower_limit,lower_limit,df5['trans_count'])
-    # upper_limit = df5['trans_amt'].mean() + 3*df5['trans_amt'].std()
-    # lower_limit = df5['trans_amt'].mean() - 3*df5['trans_amt'].std()
-    # df5['trans_amt'] = np.where(df5['trans_amt']>upper_limit,upper_limit,df5['trans_amt'])
-    # df5['trans_amt'] = np.where(df5['trans_amt']<lower_limit,lower_limit,df5['trans_amt'])
 
     df6["State"] = df6["State"].replace(state_dict)
     df6["District"] = df6["District"].str.title()
-    # upper_limit = df6['Reg_usr'].mean() + 3*df6['Reg_usr'].std()
-    # lower_limit = df6['Reg_usr'].mean() - 3*df6['Reg_usr'].std()
-    # df6['Reg_usr'] = np.where(df6['Reg_usr']>upper_limit,upper_limit,df6['Reg_usr'])
-    # df6['Reg_usr'] = np.where(df6['Reg_usr']<lower_limit,lower_limit,df6['Reg_usr'])
 
     df7["State"] = df7["State"].replace(state_dict)
-    # upper_limit = df7['Reg_usr'].mean() + 3*df7['Reg_usr'].std()
-    # lower_limit = df7['Reg_usr'].mean() - 3*df7['Reg_usr'].std()
-    # df7['Reg_usr'] = np.where(df7['Reg_usr']>upper_limit,upper_limit,df7['Reg_usr'])
-    # df7['Reg_usr'] = np.where(df7['Reg_usr']<lower_limit,lower_limit,df7['Reg_usr'])
 
     return df,df1,df2,df3,df4,df5,df6,df7
 
