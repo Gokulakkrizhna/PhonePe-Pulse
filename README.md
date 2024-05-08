@@ -43,11 +43,17 @@ To use this project, Please follow the below steps.
 - User-friendly interface powered by Streamlit
 # Approach
 ```Data Collection```: Clone the PhonePePulse data from the GitHub repository to your local directory, ensuring seamless access. 
+
 ```Data Cleaning```: Refine pre-processing methods like Data handling is applied to the collected data.
+
 ```Store data in MySql```: The collected data is stored in a MySQL database. Employ the MySQL Connector package to establish a connection with the MySQL localhost server. 
+
 ```SQLAlchemy and PyMySQL```: These 2 will facilitate the creation of a temporary connection to the MySQL database, enabling bulk insertion of data.
+
 ```Setup the Streamlit app```: Streamlit is a user-friendly web development tool that simplifies the process of creating intuitive interfaces. With Streamlit, you can easily design a straightforward UI where users can input a channel ID and quickly access all relevant details in a simple manner.
+
 ```Data Analysis```: Using SQL queries, the retrieved data has been analyzed and visualized in Streamlit through Pandas DataFrame.
+
 ```Data Visualization```: The retrieved data has been visualized using Plotly to gain valuable insights from the datasets.
 
 The provided code utilizes Python scripting along with various libraries to fetch data from the PhonePe Pulse GitHub repository. Data handling procedures are applied, and the processed data is stored in a MySQL database. Subsequently, the stored data is utilized for data visualization to gain valuable insights. Additionally, it incorporates a Streamlit web application to facilitate user interaction.
@@ -71,4 +77,20 @@ import plotly.graph_objects as go
 path = r"please provide the path"
 ```
 - ```Dataextract_visual```  file is used to extract the data stored in MySQL and visualize it to derive valuable insights using Plotly.
-- 
+- Five separate tabs have been implemented in the Streamlit web application to facilitate user interaction and enhance data visualization for insightful analysis.
+```bash
+tab1, tab2, tab3, tab4,tab19= st.tabs(["Home", "Data visualization", " Statistics Data","Transaction Insights","User Insights"])
+```
+- In Tab1 of the Streamlit web application, user can select type of ```Data```, ```Year``` and ```Quater``` for which they need to visualize the data in Geo visualization.
+- In Tab2 of the Streamlit web application, user can select the type of plot they need to visualize the retrieved data.
+- In Tab3, statistical data has been analyzed and visualized, closely resembling the PhonePe Pulse visualization.
+- In Tab4, all transaction-related data has been retrieved, analyzed, and visualized to glean insights from the data.
+- In Tab5, user-related data has been collected, analyzed, and visualized to extract valuable insights.
+
+This Python script facilitates seamless data retrieval from a local directory, conducts essential data cleaning processes, and efficiently stores the cleaned data in MySQL. Subsequently, it retrieves the stored data from MySQL, enabling comprehensive analysis and visualization through dynamic Geo-visualization techniques. This comprehensive approach empowers users to glean valuable insights and make informed decisions based on the visualized data.
+
+# Contact
+📧 Email: [gokulakkrizhna@gmail.com](mailto:gokulakkrizhna@gmail.com)
+🌐 LinkedIn: [linkedin.com/in/gokulakkrizhna-s-241562159](https://www.linkedin.com/in/gokulakkrizhna-s-241562159/)
+
+For any further questions or inquiries, feel free to reach out. We are happy to assist you with any queries.
