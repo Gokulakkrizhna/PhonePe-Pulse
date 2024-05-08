@@ -85,7 +85,7 @@ tab1, tab2, tab3, tab4,tab19= st.tabs(["Home", "Data visualization", " Statistic
 - In Tab2 of the Streamlit web application, user can select the type of plot they need to visualize the retrieved data.
 - In Tab3, statistical data has been analyzed and visualized, closely resembling the PhonePe Pulse visualization.
 - In Tab4, all transaction-related data has been retrieved, analyzed, and visualized to glean insights from the data.
-- In Tab5, user-related data has been collected, analyzed, and visualized to extract valuable insights.
+- In Tab19, user-related data has been collected, analyzed, and visualized to extract valuable insights.
 
 This Python script facilitates seamless data retrieval from a local directory, conducts essential data cleaning processes, and efficiently stores the cleaned data in MySQL. Subsequently, it retrieves the stored data from MySQL, enabling comprehensive analysis and visualization through dynamic Geo-visualization techniques. This comprehensive approach empowers users to glean valuable insights and make informed decisions based on the visualized data.
 
