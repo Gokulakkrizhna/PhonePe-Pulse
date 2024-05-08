@@ -17,6 +17,7 @@ PhonePe Pulse Data Visualization is a project aimed at analyzing and visualizing
 - Data visualization using Plotly
 # Installation
 To run this project, please install below python packages as prerequisites and download git from below mentiond link.
+
 Git - (https://git-scm.com/downloads)
 ```bash
 pip install streamlit
