@@ -91,6 +91,7 @@ This Python script facilitates seamless data retrieval from a local directory, c
 
 # Contact
 📧 Email: [gokulakkrizhna@gmail.com](mailto:gokulakkrizhna@gmail.com)
+
 🌐 LinkedIn: [linkedin.com/in/gokulakkrizhna-s-241562159](https://www.linkedin.com/in/gokulakkrizhna-s-241562159/)
 
 For any further questions or inquiries, feel free to reach out. We are happy to assist you with any queries.
