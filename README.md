@@ -51,7 +51,7 @@ To use this project, Please follow the below steps.
 
 ```SQLAlchemy and PyMySQL```: These 2 will facilitate the creation of a temporary connection to the MySQL database, enabling bulk insertion of data.
 
-```Setup the Streamlit app```: Streamlit is a user-friendly web development tool that simplifies the process of creating intuitive interfaces. With Streamlit, you can easily design a straightforward UI where users can input a channel ID and quickly access all relevant details in a simple manner.
+```Setup the Streamlit app```: Streamlit is a user-friendly web development tool that simplifies the process of creating intuitive interfaces. With Streamlit, you can easily design a straightforward UI where users can select a type of data and quickly access all relevant details in a simple manner.
 
 ```Data Analysis```: Using SQL queries, the retrieved data has been analyzed and visualized in Streamlit through Pandas DataFrame.
 
